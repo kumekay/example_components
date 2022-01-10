@@ -11,9 +11,11 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Upload components
-        uses: espressif/github-actions/upload_components@master
+        uses: kumekay/github-actions/upload_components@feature/add_version_option_upload_component
         with:
           name: cmp
           directories: cmp
+          version: git
           namespace: example
+          service_url: ${{ secrets.IDF_COMPONENT_API_URL }}
           api_token: ${{ secrets.IDF_COMPONENT_API_TOKEN }}
