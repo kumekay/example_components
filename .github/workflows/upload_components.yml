@@ -14,8 +14,8 @@ jobs:
         uses: kumekay/github-actions/upload_components@feature/add_version_option_upload_component
         with:
           name:  vertest
-          directories: cmp
-          version: "0.0.14"
+          directories: cmp;git-only-cmp
+          version: git
           namespace: kumekay
           service_url: ${{ secrets.IDF_COMPONENT_API_URL }}
           api_token: ${{ secrets.IDF_COMPONENT_API_TOKEN }}
