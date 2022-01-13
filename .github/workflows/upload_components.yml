@@ -15,7 +15,7 @@ jobs:
         with:
           name:  vertest
           directories: cmp
-          version: git
+          version: "0.0.14"
           namespace: kumekay
           service_url: ${{ secrets.IDF_COMPONENT_API_URL }}
           api_token: ${{ secrets.IDF_COMPONENT_API_TOKEN }}
