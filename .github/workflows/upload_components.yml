@@ -18,4 +18,6 @@ jobs:
           name: tmptst
           directories: cmp
           namespace: kumekay
+          service_url: https://some.service
+          registry_url: https://some.registry
           api_token: ${{ secrets.IDF_COMPONENT_API_TOKEN }}
