@@ -13,10 +13,9 @@ jobs:
         with:
           submodules: "recursive"
       - name: Upload component to the component registry
-        uses: espressif/upload-components-ci-action@fix/dep-warning
+        uses: espressif/upload-components-ci-action@feat/upload_custom_name
         with:
           name: tmptst
           directories: cmp
           namespace: kumekay
-          service_url: https://some.service
           api_token: ${{ secrets.IDF_COMPONENT_API_TOKEN }}
