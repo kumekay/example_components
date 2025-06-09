@@ -15,7 +15,6 @@ jobs:
       - name: Upload component to the component registry
         uses: espressif/upload-components-ci-action@feat/smooth-migration
         with:
-          name: tmptst
           directories: cmp
           namespace: kumekay
           api_token: ${{ secrets.IDF_COMPONENT_API_TOKEN }}
