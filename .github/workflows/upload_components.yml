@@ -17,4 +17,5 @@ jobs:
         with:
           directories: cmp
           namespace: kumekay
+          dry_run: true
           api_token: ${{ secrets.IDF_COMPONENT_API_TOKEN }}
