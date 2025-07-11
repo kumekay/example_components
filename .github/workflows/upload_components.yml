@@ -19,3 +19,9 @@ jobs:
             cmp
           namespace: kumekay
           api_token: ${{ secrets.IDF_COMPONENT_API_TOKEN }}
+
+      - name: Upload cmp/dist as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cmp-dist
+          path: cmp/dist/
