@@ -11,7 +11,7 @@ jobs:
   build:
     strategy:
       matrix:
-        idf_ver: ["latest"]
+        idf_ver: ["release-v5.3"]
     runs-on: ubuntu-latest
     container: espressif/idf:${{ matrix.idf_ver }}
     steps:
