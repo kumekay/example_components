@@ -13,7 +13,7 @@ jobs:
         with:
           submodules: "recursive"
       - name: Upload component to the component registry
-        uses: espressif/upload-components-ci-action@feat/lock_dependencies
+        uses: espressif/upload-components-ci-action@v2
         with:
           components: |
             cmp
