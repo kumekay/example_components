@@ -2,12 +2,14 @@ name: Upload components to the registry
 
 on:
   push:
-    branches:
-      - main
+    tags:
+      - v*
 
 jobs:
   upload_components:
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write 
     steps:
       - uses: actions/checkout@v4
         with:
@@ -18,6 +20,7 @@ jobs:
           components: |
             cmp
           namespace: kumekay
-          api_token: ${{ secrets.IDF_COMPONENT_API_TOKEN }}
+          version: ${{ github.ref_name }}
+          # api_token: ${{ secrets.IDF_COMPONENT_API_TOKEN }}
 
 
